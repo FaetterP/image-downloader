@@ -33,7 +33,7 @@ namespace image_downloader
             this.selectedFolderText = new System.Windows.Forms.Label();
             this.selectSourceDropdown = new System.Windows.Forms.ComboBox();
             this.sourceLabel = new System.Windows.Forms.Label();
-            this.StartButton = new System.Windows.Forms.Button();
+            this.startButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
@@ -45,6 +45,7 @@ namespace image_downloader
             this.selectFolderButton.TabIndex = 0;
             this.selectFolderButton.Text = "Select folder";
             this.selectFolderButton.UseVisualStyleBackColor = true;
+            this.selectFolderButton.Click += new System.EventHandler(this.selectFolderButton_Click);
             // 
             // selectedFolderText
             // 
@@ -75,14 +76,15 @@ namespace image_downloader
             this.sourceLabel.TabIndex = 3;
             this.sourceLabel.Text = "Source";
             // 
-            // StartButton
+            // startButton
             // 
-            this.StartButton.Location = new System.Drawing.Point(15, 125);
-            this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(75, 32);
-            this.StartButton.TabIndex = 4;
-            this.StartButton.Text = "Start";
-            this.StartButton.UseVisualStyleBackColor = true;
+            this.startButton.Location = new System.Drawing.Point(15, 125);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(75, 32);
+            this.startButton.TabIndex = 4;
+            this.startButton.Text = "Start";
+            this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // progressBar1
             // 
@@ -97,7 +99,7 @@ namespace image_downloader
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(321, 193);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.StartButton);
+            this.Controls.Add(this.startButton);
             this.Controls.Add(this.sourceLabel);
             this.Controls.Add(this.selectSourceDropdown);
             this.Controls.Add(this.selectedFolderText);
@@ -115,7 +117,7 @@ namespace image_downloader
         private System.Windows.Forms.Label selectedFolderText;
         private System.Windows.Forms.ComboBox selectSourceDropdown;
         private System.Windows.Forms.Label sourceLabel;
-        private System.Windows.Forms.Button StartButton;
+        private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
