@@ -35,6 +35,7 @@ namespace image_downloader
             this.sourceLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.urlLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // selectFolderButton
@@ -93,11 +94,21 @@ namespace image_downloader
             this.progressBar1.Size = new System.Drawing.Size(100, 23);
             this.progressBar1.TabIndex = 5;
             // 
+            // urlLabel
+            // 
+            this.urlLabel.AutoSize = true;
+            this.urlLabel.Location = new System.Drawing.Point(118, 102);
+            this.urlLabel.Name = "urlLabel";
+            this.urlLabel.Size = new System.Drawing.Size(43, 17);
+            this.urlLabel.TabIndex = 6;
+            this.urlLabel.Text = "name";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(321, 193);
+            this.Controls.Add(this.urlLabel);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.sourceLabel);
@@ -106,6 +117,7 @@ namespace image_downloader
             this.Controls.Add(this.selectFolderButton);
             this.Name = "Form1";
             this.Text = "image-downloader";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +131,7 @@ namespace image_downloader
         private System.Windows.Forms.Label sourceLabel;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label urlLabel;
     }
 }
 
